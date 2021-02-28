@@ -1,0 +1,8 @@
+apply plugin: 'checkstyle'
+
+checkstyle {
+    toolVersion = "${findProperty('version.checkstyle')}"
+    ignoreFailures = false
+    maxWarnings = 0
+    configFile = new File("${rootDir}/gradle", 'checkstyle_checks.xml')
+}
